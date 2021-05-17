@@ -11,7 +11,7 @@ export RELEASE=`cat /etc/os-release | grep VERSION_ID | cut -d"=" -f2`
 export PLATFORM_SDK_ROOT="/srv/mer"
 export ANDROID_ROOT=$HOME/sfos/hadk
 
-remote="https://github.com/sailfish-oneplus6"
+remote="https://github.com/silvestr25"
 
 alias ubu="ubu-chroot -r $PLATFORM_SDK_ROOT/sdks/ubuntu"
 alias bp="rpm/dhd/helpers/build_packages.sh"
@@ -40,8 +40,8 @@ update_src() {
 
 choose_target() {
 	echo -e "\nWhich device would you like to build for?"
-	echo -e "\n  1. enchilada (OnePlus 6)"
-	echo -e "  2. fajita    (OnePlus 6T)\n"``
+	echo -e "\n  1. guacamoleb    (OnePlus 7)"
+	echo -e "  2. guacamole    (OnePlus 7Pro)\n"``
 	read -p "Choice: (1/2) " target
 
 	# Setup variables
@@ -50,8 +50,8 @@ choose_target() {
    if [ -z $target ]; then
      device="$(<$ANDROID_ROOT/.last_device)"
    else
-     device="enchilada"
-     [ "$target" = "2" ] && device="fajita"
+     device="guacamoleb"
+     [ "$target" = "2" ] && device="guacamole"
    fi
 
 	sed "s/DEVICE=.*/DEVICE=\"$device\"/" -i $HOME/.hadk.env
