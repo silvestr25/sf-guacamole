@@ -10,9 +10,9 @@
 
 ```sh
 cd
-curl -O https://raw.githubusercontent.com/sailfish-oneplus6/sf-enchilada/master/files/.hadk.env
-curl -O https://raw.githubusercontent.com/sailfish-oneplus6/sf-enchilada/master/files/.mersdk.profile
-curl -O https://raw.githubusercontent.com/sailfish-oneplus6/sf-enchilada/master/files/.mersdkubu.profile
+curl -O https://raw.githubusercontent.com/silvestr25/sf-guacamole/master/files/.hadk.env
+curl -O https://raw.githubusercontent.com/silvestr25/sf-guacamole/master/files/.mersdk.profile
+curl -O https://raw.githubusercontent.com/silvestr25/sf-guacamole/master/files/.mersdkubu.profile
 ```
 * Modify your `.bashrc` to contain the following:
 ```sh
@@ -46,7 +46,7 @@ Now follow the [OnePlus 5 initial building guide](https://github.com/sailfishos-
 ```sh
 cd $ANDROID_ROOT
 repo init -u git://github.com/mer-hybris/android.git -b hybris-16.0 --depth 1
-git clone https://github.com/sailfish-oneplus6/local_manifests .repo/local_manifests
+git clone https://github.com/silvestr25/local_manifests .repo/local_manifests
 ```
 
 ### Sync all the required packages
